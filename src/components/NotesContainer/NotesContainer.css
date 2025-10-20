@@ -1,0 +1,49 @@
+.notes-section {
+  width: 700px;
+  padding: 30px;
+  background-color: #eaefd3;
+  position: relative;
+  top: -97px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5ea;
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.sort-dropdown label,
+.sort-dropdown h1 {
+  font-size: 0.9em;
+  color: #8e8e93;
+  margin-left: 10px;
+}
+
+#sort-by {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e5ea;
+  background-color: #f2f2f7;
+  color: #1d1d1f;
+  cursor: pointer;
+}
+
+.notes-header h1 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.sort-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
