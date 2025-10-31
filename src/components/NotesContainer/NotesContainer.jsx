@@ -1,18 +1,25 @@
 import Notes from "../Notes/Notes";
 import "./NotesContainer.css";
-function NotesContainer() {
+function NotesContainer({ notes }) {
   return (
-    <section class="notes-section">
-      <header class="notes-header">
-        <div class="sort-dropdown">
+    <section className="notes-section">
+      <header className="notes-header">
+        <div className="sort-dropdown">
+          <label>Sort By:</label>
           <select id="sort-by" name="sort">
             <option value="latest">Latest</option>
             <option value="oldest">Oldest</option>
           </select>
-          <h1>Notes Count:</h1>
+          <h1>
+            Notes Count: <span>{notes.length}</span>
+          </h1>
         </div>
       </header>
-      <Notes />
+      <div className="notes">
+        {notes.map((note) => (
+          <Notes key={note.id} note={note} />
+        ))}
+      </div>
     </section>
   );
 }

@@ -1,15 +1,16 @@
 import "./Notes.css";
 
-function Notes() {
+function Notes({ note }) {
   return (
-    <ul class="note-list">
-      <li class="note-item">
-        <div class="note-item-group">
-          <span class="note-title">Title</span>
-          <span class="note-date">09/2/11</span>
+    <ul className="note-list">
+      <li className="note-item">
+        <div className="note-item-group">
+          <span classNmae="note-title">{note.Title}</span>
+          <span classNmae="note-date">{note.id}</span>
+          <h1>{note.Description}</h1>
         </div>
         <button class="delete-button" aria-label="Delete note">
-          <i class="fas fa-trash"></i>
+          <i className="fas fa-trash"></i>
         </button>
       </li>
     </ul>
