@@ -1,6 +1,6 @@
 import Notes from "../Notes/Notes";
 import "./NotesContainer.css";
-function NotesContainer({ notes }) {
+function NotesContainer({ notes, setNotes }) {
   return (
     <section className="notes-section">
       <header className="notes-header">
@@ -17,7 +17,7 @@ function NotesContainer({ notes }) {
       </header>
       <div className="notes">
         {notes.map((note) => (
-          <Notes key={note.id} note={note} />
+          <Notes key={note.id} note={note} notes={notes} setNotes={setNotes} />
         ))}
       </div>
     </section>

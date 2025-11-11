@@ -15,7 +15,7 @@ function AddNote({ setNotes }) {
       isCompleted: false,
     };
 
-    console.log(newNote);
+    
 
     setNotes((prevnote) => [...prevnote, newNote]);
 
