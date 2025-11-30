@@ -5,8 +5,15 @@
   padding-top: 20px;
 }
 
+.note-list.complete{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+
+
 .note-item {
-  background-color: #f2f2f7;
+  background-color: #F2F3F4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,13 +23,23 @@
   cursor: pointer;
 }
 
+.note-item.completed{
+  background-color: #80FF80;
+  color: white;
+}
+
 .note-item:last-child {
   border-bottom: none;
 }
 
 .note-item:hover {
-  background-color: #505168;
+  background-color: #2c2d38;
   border-radius: 10px;
+  color: white;
+}
+
+.note-item.completed:hover{
+  background-color: #67c967;
   color: white;
 }
 
@@ -45,11 +62,13 @@
 .delete-button {
   background: none;
   border: none;
-  color: #8e8e93;
+  color: #69696b;
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
   transition: color 0.2s, background-color 0.2s;
+ position: relative;
+ left: 120px;
 }
 
 .delete-button:hover {
@@ -59,4 +78,24 @@
 
 .delete-button i {
   font-size: 1.1em;
+}
+
+.check-button {
+  background: none;
+  border: none;
+  color: #69696b;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.check-button i {
+  font-size: 1.1em;
+}
+
+
+.check-button:hover {
+  color: #46db6c;
+  background-color: rgba(84, 248, 62, 0.1);
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AddNote.css";
+import toast from "react-hot-toast";
 
 function AddNote({ setNotes }) {
   const [title, setTitle] = useState("");
@@ -18,6 +19,8 @@ function AddNote({ setNotes }) {
     
 
     setNotes((prevnote) => [...prevnote, newNote]);
+
+    toast.success("Note Added Successfully.");
 
     setTitle("");
     setDescription("");
