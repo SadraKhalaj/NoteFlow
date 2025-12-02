@@ -1,3 +1,4 @@
+import Filternotes from "../FilterNotes/FilterNotes";
 import Notes from "../Notes/Notes";
 import "./NotesContainer.css";
 function NotesContainer({ notes, setNotes }) {
@@ -15,10 +16,17 @@ function NotesContainer({ notes, setNotes }) {
           </h1>
         </div>
       </header>
+      <Filternotes />
+      <hr />
       <div className="notes">
-        {notes.map((note) => (
-          <Notes key={note.id} note={note} notes={notes} setNotes={setNotes} />
-        ))}
+          {notes.length ? notes.map((note) => (
+          <Notes
+            key={note.id}
+            note={note}
+            setNotes={setNotes}
+            notes={notes}
+          />
+        )) : <p className="text">No note yet...</p>}
       </div>
     </section>
   );
