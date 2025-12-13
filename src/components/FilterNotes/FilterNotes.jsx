@@ -2,16 +2,10 @@ import { useState } from "react";
 import "./FilterNotes.css"
 import Button from "../Button/Button";
 
-const data = [
-  { title: "All", id: 1 },
-  { title: "Complete", id: 2 },
-  { title: "UnComplete", id: 3 },
-];
-function Filternotes() {
-  const [active, setActive] = useState(1);
-  const handleactive = (id) => {
-    setActive(id);
-  };
+
+function Filternotes({active , data , handleactive}) {
+  
+
   return (
     <div className="filter">
       {data.map((item) => (

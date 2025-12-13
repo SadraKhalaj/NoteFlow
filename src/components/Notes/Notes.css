@@ -5,15 +5,13 @@
   padding-top: 20px;
 }
 
-.note-list.complete{
+.note-list.complete {
   opacity: 0.5;
   text-decoration: line-through;
 }
 
-
-
 .note-item {
-  background-color: #F2F3F4;
+  background-color: #f2f3f4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,8 +21,8 @@
   cursor: pointer;
 }
 
-.note-item.completed{
-  background-color: #80FF80;
+.note-item.completed {
+  background-color: #06402b;
   color: white;
 }
 
@@ -38,8 +36,8 @@
   color: white;
 }
 
-.note-item.completed:hover{
-  background-color: #67c967;
+.note-item.completed:hover {
+  background-color: #108359;
   color: white;
 }
 
@@ -64,16 +62,15 @@
   border: none;
   color: #69696b;
   cursor: pointer;
-  padding: 10px;
   border-radius: 50%;
   transition: color 0.2s, background-color 0.2s;
- position: relative;
- left: 120px;
+  position: relative;
+  left: 120px;
 }
 
 .delete-button:hover {
   color: #ff3b30;
-  background-color: rgba(255, 59, 48, 0.1);
+  
 }
 
 .delete-button i {
@@ -85,7 +82,7 @@
   border: none;
   color: #69696b;
   cursor: pointer;
-  padding: 10px;
+
   border-radius: 50%;
   transition: color 0.2s, background-color 0.2s;
 }
@@ -94,8 +91,7 @@
   font-size: 1.1em;
 }
 
-
 .check-button:hover {
   color: #46db6c;
-  background-color: rgba(84, 248, 62, 0.1);
+ 
 }
