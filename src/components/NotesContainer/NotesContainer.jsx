@@ -15,9 +15,14 @@ const data = [
 
 function NotesContainer({ notes, setNotes }) {
   const [active, setActive] = useState(1);
+  const [sortOrder ,setSortOrder ] = useState("Latest");
 
   const handleactive = (id) => {
     setActive(id);
+  };
+
+  const changeHandler = (e) => {
+    setSortOrder(e.target.value);
   };
 
 
@@ -37,7 +42,17 @@ function NotesContainer({ notes, setNotes }) {
       break;
     default:
       break;
-  }
+  };
+
+
+  const sortNotes = [...filteredNotes].sort((a , b) => {
+    if(sortOrder === "latest"){
+      return new Date(b.createdTime) - new Date(a.createdTime);
+    } else{
+      return new Date(a.createdTime) - new Date(b.createdTime);
+    }
+  });
+  console.log(sortNotes)
 
 
 
@@ -46,7 +61,7 @@ function NotesContainer({ notes, setNotes }) {
       <header className="notes-header">
         <div className="sort-dropdown">
           <label>Sort By:</label>
-          <select id="sort-by" name="sort">
+          <select id="sort-by" name="sort" value={sortOrder} onChange={changeHandler}>
             <option value="latest">Latest</option>
             <option value="oldest">Oldest</option>
           </select>
@@ -58,7 +73,7 @@ function NotesContainer({ notes, setNotes }) {
       <Filternotes data={data} handleactive={handleactive} active={active}/>
       <hr />
       <div className="notes">
-          {notes.length ? filteredNotes.map((note) => (
+          {sortNotes.length ? sortNotes.map((note) => (
           <Notes
             key={note.id}
             note={note}

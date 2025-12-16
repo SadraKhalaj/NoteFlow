@@ -13,6 +13,7 @@ function AddNote({ setNotes }) {
       Title: title,
       Description: description,
       id: new Date().toISOString(),
+      createdTime: new Date(),
       isCompleted: false,
     };
 
